@@ -1,5 +1,7 @@
 import React from 'react';
 import { Container, Row, Col } from "reactstrap";
+import { Link } from 'react-router-dom';
+
 
 
 const Footer = () => {
@@ -7,8 +9,22 @@ const Footer = () => {
         <footer className='site-footer'>
             <Container>
                 <Row>
-                    <Col xs={{size: 4, offset: 1}} sm='2'>
-                        <h5>This will be site Navigation!!</h5>
+                    <Col xs={{ size: 4, offset: 2 }} sm='2'>
+                        <h5>Links</h5>
+                        <ul className='list-unstyled'>
+                            <li>
+                                <Link to='/'>Home</Link>
+                            </li>
+                            <li>
+                                <Link to='/directory'>Directory</Link>
+                            </li>
+                            <li>
+                                <Link to='/about'>About Us</Link>
+                            </li>
+                            <li>
+                                <Link to='/contact'>Contact Us</Link>
+                            </li>
+                        </ul>
                     </Col>
                     <Col xs='6' sm='3' className='text-center'>
                     <h5>Social</h5>
@@ -38,6 +54,7 @@ const Footer = () => {
                         </a>
                     </Col>
                     <Col sm='4' className='text-center'>
+                    <h5>Contacts</h5>
                     <a
                             role='button'
                             className='btn btn-link'

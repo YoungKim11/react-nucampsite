@@ -1,14 +1,21 @@
+import { Routes, Route } from 'react-router-dom';
+import ContactPage from './pages/ContactPage';
+import HomePage from './pages/HomePage';
 import React from 'react';
 import Header from './components/Header';
-import CampsitesDirectoryPage from './pages/CampsiteDirectoryPage';
 import Footer from './components/Footer';
+import CampsitesDirectoryPage from './pages/CampsiteDirectoryPage';
 import './App.css';
 
 function App() {
   return (
     <div className="App">
       <Header /> 
-      <CampsitesDirectoryPage />
+      <Routes>
+          <Route path='/' element={<HomePage />} />
+          <Route path='contact' element={<ContactPage />} />
+          <Route path='directory' element={<CampsitesDirectoryPage />}/>
+      </Routes>
       <Footer />
     </div>
   );
